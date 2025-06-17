@@ -1,4 +1,4 @@
-## install dependencies
+## Install dependencies
 
 ### Pnpm install
 
@@ -9,5 +9,5 @@
 ## localhost
 ### localhost : http://localhost:8080/
 
-(working)
+(In working)
 
