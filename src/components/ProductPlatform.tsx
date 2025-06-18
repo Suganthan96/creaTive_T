@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Database, Gauge, Cpu, Bluetooth, Battery, Server, ArrowRight, Smartphone, Code, Wifi, Cloud, MonitorSmartphone, FileText } from 'lucide-react';
 
@@ -78,7 +77,7 @@ const ProductPlatform = () => {
         >
           <div className="bg-gray-200 rounded-xl p-4 sm:p-6">
             <div className="flex flex-col items-center mb-3 sm:mb-4">
-              <h3 className="text-xl sm:text-2xl font-bold text-center mb-0">wrlds</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-center mb-0">Suganth Creative</h3>
               <p className="text-lg sm:text-xl font-medium text-center">Platform</p>
             </div>
             
