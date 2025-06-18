@@ -13,7 +13,6 @@ import WorkwearProject from "./pages/WorkwearProject";
 import HockeyProject from "./pages/HockeyProject";
 import PetProject from "./pages/PetProject";
 import About from "./pages/About";
-import Careers from "./pages/Careers";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Blog from "./pages/Blog";
 import BlogPostDetail from "./pages/BlogPostDetail";
@@ -35,7 +34,6 @@ const App = () => {
             <Route path="/projects/hockey" element={<HockeyProject />} />
             <Route path="/projects/pet-tracker" element={<PetProject />} />
             <Route path="/about" element={<About />} />
-            <Route path="/careers" element={<Careers />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPostDetail />} />
