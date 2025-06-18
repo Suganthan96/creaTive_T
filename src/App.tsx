@@ -12,8 +12,6 @@ import SportRetailProject from "./pages/SportRetailProject";
 import WorkwearProject from "./pages/WorkwearProject";
 import HockeyProject from "./pages/HockeyProject";
 import PetProject from "./pages/PetProject";
-import TechDetails from "./pages/TechDetails";
-import DevelopmentProcess from "./pages/DevelopmentProcess";
 import About from "./pages/About";
 import Careers from "./pages/Careers";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -36,8 +34,6 @@ const App = () => {
             <Route path="/projects/workwear" element={<WorkwearProject />} />
             <Route path="/projects/hockey" element={<HockeyProject />} />
             <Route path="/projects/pet-tracker" element={<PetProject />} />
-            <Route path="/tech-details" element={<TechDetails />} />
-            <Route path="/development-process" element={<DevelopmentProcess />} />
             <Route path="/about" element={<About />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
