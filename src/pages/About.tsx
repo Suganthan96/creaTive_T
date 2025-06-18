@@ -1,4 +1,3 @@
-
 import { ArrowLeft, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
@@ -132,19 +131,19 @@ const About = () => {
                       name: "Felix von Heland",
                       role: "CEO and Founder",
                       bio: "Leading WRLDS Technologies with a vision to transform the future of smart textiles.",
-                      image: "/lovable-uploads/aa5291bd-2417-4c1e-9a02-0bcc71a92507.png"
+                      image: "/uploads/aa5291bd-2417-4c1e-9a02-0bcc71a92507.png"
                     },
                     {
                       name: "Niek Bijman",
                       role: "Software Lead",
                       bio: "Specializing in cloud infrastructure and APIs for seamless data integration.",
-                      image: "/lovable-uploads/e502f601-c519-43a8-86f5-5fa89ae50d2f.png"
+                      image: "/uploads/e502f601-c519-43a8-86f5-5fa89ae50d2f.png"
                     },
                     {
                       name: "Chengjie Li",
                       role: "Hardware Lead",
                       bio: "Expert in embedded systems engineering, leading our hardware development efforts.",
-                      image: "/lovable-uploads/3de85ddd-15e1-4216-9697-f91abb9a47ce.png"
+                      image: "/uploads/3de85ddd-15e1-4216-9697-f91abb9a47ce.png"
                     },
                     {
                       name: "Love",

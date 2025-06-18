@@ -21,7 +21,7 @@ const SEO: React.FC<SEOProps> = ({
   description = 'WRLDS Technologies: Pioneering smart engineering solutions with textile sensors for sports, safety, and performance monitoring.',
   type = 'website',
   name = 'WRLDS Technologies',
-  imageUrl = '/lovable-uploads/48ecf6e2-5a98-4a9d-af6f-ae2265cd4098.png',
+  imageUrl = '/uploads/48ecf6e2-5a98-4a9d-af6f-ae2265cd4098.png',
   publishDate,
   modifiedDate,
   author,
@@ -73,7 +73,7 @@ const SEO: React.FC<SEOProps> = ({
     '@type': 'Organization',
     name: 'WRLDS Technologies',
     url: 'https://wrlds.com',
-    logo: 'https://wrlds.com/lovable-uploads/14ea3fe0-19d6-425c-b95b-4117bc41f3ca.png',
+    logo: 'https://wrlds.com/uploads/14ea3fe0-19d6-425c-b95b-4117bc41f3ca.png',
     description: 'Pioneering smart engineering solutions with textile sensors',
     contactPoint: {
       '@type': 'ContactPoint',
@@ -113,7 +113,7 @@ const SEO: React.FC<SEOProps> = ({
       name: 'WRLDS Technologies',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://wrlds.com/lovable-uploads/14ea3fe0-19d6-425c-b95b-4117bc41f3ca.png',
+        url: 'https://wrlds.com/uploads/14ea3fe0-19d6-425c-b95b-4117bc41f3ca.png',
         width: 512,
         height: 512
       },

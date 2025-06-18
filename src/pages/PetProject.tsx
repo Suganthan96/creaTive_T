@@ -1,4 +1,3 @@
-
 import ProjectPageLayout from '@/components/ProjectPageLayout';
 import { PawPrint, BadgePercent, HeartPulse, Smartphone, Database, FlaskConical } from 'lucide-react';
 
@@ -7,7 +6,7 @@ const PetProject = () => {
     <ProjectPageLayout
       title="Dog Activity Counter"
       subtitle="Smart monitoring for canine health and insurance"
-      imageUrl="/lovable-uploads/d5ce901e-2ce0-4f2a-bce1-f0ca5d6192df.png"
+      imageUrl="/uploads/d5ce901e-2ce0-4f2a-bce1-f0ca5d6192df.png"
       brandName="UK Insurance Giant"
     >
       <div className="bg-green-50 p-4 rounded-lg mb-6 flex items-center">
