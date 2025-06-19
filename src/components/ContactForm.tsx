@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -149,66 +148,66 @@ const ContactForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="bg-white rounded-xl shadow-xl p-8 border border-gray-700 text-black">
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField control={form.control} name="name" render={({
-                field
-              }) => <FormItem>
-                      <FormLabel className="text-gray-700">Name</FormLabel>
-                      <div className="relative">
-                        <User className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
-                        <FormControl>
-                          <Input placeholder="Your name" className="pl-10" {...field} />
-                        </FormControl>
-                      </div>
-                      <FormMessage />
-                    </FormItem>} />
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 bg-white p-10 rounded-xl shadow-xl border border-gray-200 text-black w-full max-w-2xl mx-auto">
+                <FormField control={form.control} name="name" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-gray-700">Name</FormLabel>
+                    <div className="relative">
+                      <User className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
+                      <FormControl>
+                        <Input placeholder="Your name" className="pl-10 w-full" {...field} />
+                      </FormControl>
+                    </div>
+                    <FormMessage />
+                  </FormItem>
+                )} />
                 
-                <FormField control={form.control} name="email" render={({
-                field
-              }) => <FormItem>
-                      <FormLabel className="text-gray-700">Email</FormLabel>
-                      <div className="relative">
-                        <Mail className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
-                        <FormControl>
-                          <Input type="email" placeholder="your.email@example.com" className="pl-10" {...field} />
-                        </FormControl>
-                      </div>
-                      <FormMessage />
-                    </FormItem>} />
+                <FormField control={form.control} name="email" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-gray-700">Email</FormLabel>
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
+                      <FormControl>
+                        <Input type="email" placeholder="your.email@example.com" className="pl-10 w-full" {...field} />
+                      </FormControl>
+                    </div>
+                    <FormMessage />
+                  </FormItem>
+                )} />
                 
-                <FormField control={form.control} name="message" render={({
-                field
-              }) => <FormItem>
-                      <FormLabel className="text-gray-700">Message</FormLabel>
-                      <div className="relative">
-                        <MessageSquare className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                        <FormControl>
-                          <Textarea placeholder="Tell us about your project or inquiry..." className="min-h-[120px] pl-10 resize-none" {...field} />
-                        </FormControl>
-                      </div>
-                      <FormMessage />
-                    </FormItem>} />
+                <FormField control={form.control} name="message" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-gray-700">Message</FormLabel>
+                    <div className="relative">
+                      <MessageSquare className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                      <FormControl>
+                        <Textarea placeholder="Tell us about your project or inquiry..." className="min-h-[120px] pl-10 resize-none w-full" {...field} />
+                      </FormControl>
+                    </div>
+                    <FormMessage />
+                  </FormItem>
+                )} />
                 
                 {/* Honeypot field - hidden from real users but bots will fill it */}
-                <FormField control={form.control} name="honeypot" render={({
-                field
-              }) => <FormItem className="hidden">
-                      <FormLabel>Leave this empty</FormLabel>
-                      <FormControl>
-                        <Input {...field} tabIndex={-1} />
-                      </FormControl>
-                    </FormItem>} />
+                <FormField control={form.control} name="honeypot" render={({ field }) => (
+                  <FormItem className="hidden">
+                    <FormLabel>Leave this empty</FormLabel>
+                    <FormControl>
+                      <Input {...field} tabIndex={-1} />
+                    </FormControl>
+                  </FormItem>
+                )} />
                 
                 {/* Hidden timestamp field */}
-                <FormField control={form.control} name="timestamp" render={({
-                field
-              }) => <FormItem className="hidden">
-                      <FormControl>
-                        <Input type="hidden" {...field} />
-                      </FormControl>
-                    </FormItem>} />
+                <FormField control={form.control} name="timestamp" render={({ field }) => (
+                  <FormItem className="hidden">
+                    <FormControl>
+                      <Input type="hidden" {...field} />
+                    </FormControl>
+                  </FormItem>
+                )} />
                 
-                <button type="submit" disabled={isSubmitting} className="w-full bg-black hover:bg-gray-800 text-white py-3 px-6 rounded-md transition-colors flex items-center justify-center disabled:opacity-70">
+                <button type="submit" disabled={isSubmitting} className="w-full bg-black hover:bg-gray-800 text-white py-4 px-6 rounded-md transition-colors flex items-center justify-center disabled:opacity-70 text-lg font-semibold">
                   {isSubmitting ? "Sending..." : <>
                       Send Message
                       <Send className="ml-2 h-4 w-4" />
