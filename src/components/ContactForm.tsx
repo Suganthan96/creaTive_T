@@ -131,8 +131,9 @@ const ContactForm = () => {
     }
   };
 
-  return <section id="contact" className="bg-gradient-to-b from-white to-black text-white relative py-[25px]">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+  return (
+    <section id="contact" className="bg-gradient-to-b from-white to-black text-white relative py-[25px]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block mb-3 px-3 py-1 bg-white text-black rounded-full text-sm font-medium">
             Get In Touch
@@ -145,17 +146,17 @@ const ContactForm = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="bg-white rounded-xl shadow-xl p-8 border border-gray-700 text-black">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 border border-gray-700 text-black w-full">
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 bg-white p-10 rounded-xl shadow-xl border border-gray-200 text-black w-full max-w-2xl mx-auto">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-white p-12 rounded-xl shadow-xl border border-gray-200 text-black w-full mx-auto">
                 <FormField control={form.control} name="name" render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-gray-700">Name</FormLabel>
+                    <FormLabel className="text-gray-700 text-lg">Name</FormLabel>
                     <div className="relative">
-                      <User className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
+                      <User className="absolute left-3 top-3 h-6 w-6 text-gray-400" />
                       <FormControl>
-                        <Input placeholder="Your name" className="pl-10 w-full" {...field} />
+                        <Input placeholder="Your name" className="pl-12 w-full h-14 text-lg" {...field} />
                       </FormControl>
                     </div>
                     <FormMessage />
@@ -164,11 +165,11 @@ const ContactForm = () => {
                 
                 <FormField control={form.control} name="email" render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-gray-700">Email</FormLabel>
+                    <FormLabel className="text-gray-700 text-lg">Email</FormLabel>
                     <div className="relative">
-                      <Mail className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
+                      <Mail className="absolute left-3 top-3 h-6 w-6 text-gray-400" />
                       <FormControl>
-                        <Input type="email" placeholder="your.email@example.com" className="pl-10 w-full" {...field} />
+                        <Input type="email" placeholder="your.email@example.com" className="pl-12 w-full h-14 text-lg" {...field} />
                       </FormControl>
                     </div>
                     <FormMessage />
@@ -177,11 +178,11 @@ const ContactForm = () => {
                 
                 <FormField control={form.control} name="message" render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-gray-700">Message</FormLabel>
+                    <FormLabel className="text-gray-700 text-lg">Message</FormLabel>
                     <div className="relative">
-                      <MessageSquare className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                      <MessageSquare className="absolute left-3 top-4 h-6 w-6 text-gray-400" />
                       <FormControl>
-                        <Textarea placeholder="Tell us about your project or inquiry..." className="min-h-[120px] pl-10 resize-none w-full" {...field} />
+                        <Textarea placeholder="Tell us about your project or inquiry..." className="min-h-[160px] pl-12 pt-4 w-full text-lg" {...field} />
                       </FormControl>
                     </div>
                     <FormMessage />
@@ -207,31 +208,36 @@ const ContactForm = () => {
                   </FormItem>
                 )} />
                 
-                <button type="submit" disabled={isSubmitting} className="w-full bg-black hover:bg-gray-800 text-white py-4 px-6 rounded-md transition-colors flex items-center justify-center disabled:opacity-70 text-lg font-semibold">
-                  {isSubmitting ? "Sending..." : <>
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting} 
+                  className="w-full bg-black hover:bg-gray-800 text-white py-5 px-6 rounded-md transition-colors flex items-center justify-center disabled:opacity-70 text-xl font-semibold"
+                >
+                  {isSubmitting ? "Sending..." : (
+                    <>
                       Send Message
-                      <Send className="ml-2 h-4 w-4" />
-                    </>}
+                      <Send className="ml-2 h-5 w-5" />
+                    </>
+                  )}
                 </button>
               </form>
             </Form>
           </div>
           
-          <div className="space-y-8">
+          <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-700 text-black">
               <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white mb-4">
                 <Mail className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
               <p className="text-gray-600 mb-2">For general inquiries:</p>
-              <a href="mailto:info@wrlds.com" className="text-blue-500 hover:underline">hello@wrlds.com</a>
-              <p className="text-gray-600 mt-2 mb-2">
-            </p>
+              <a href="mailto:hello@wrlds.com" className="text-blue-500 hover:underline">hello@wrlds.com</a>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default ContactForm;

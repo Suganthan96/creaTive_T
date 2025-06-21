@@ -6,9 +6,9 @@ const Contact = () => {
   return (
     <PageLayout>
       <div className="min-h-[80vh] bg-gradient-to-b from-white to-black py-16">
-        <div className="max-w-4xl mx-auto px-2 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
           {/* Left: Contact Info */}
-          <div className="md:col-span-7 w-full space-y-8">
+          <div className="md:col-span-5 w-full space-y-8">
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-black">
               <div className="flex items-center mb-4">
                 <MapPin className="h-7 w-7 text-yellow-500 mr-3" />
@@ -38,10 +38,8 @@ const Contact = () => {
             </div>
           </div>
           {/* Right: Contact Form */}
-          <div className="md:col-span-5 w-full flex flex-col items-center">
-            <div className="w-full max-w-md">
-              <ContactForm />
-            </div>
+          <div className="md:col-span-7 w-full">
+            <ContactForm />
           </div>
         </div>
       </div>
