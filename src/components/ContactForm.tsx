@@ -223,17 +223,6 @@ const ContactForm = () => {
               </form>
             </Form>
           </div>
-          
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-700 text-black">
-              <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white mb-4">
-                <Mail className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Email Us</h3>
-              <p className="text-gray-600 mb-2">For general inquiries:</p>
-              <a href="mailto:hello@wrlds.com" className="text-blue-500 hover:underline">hello@wrlds.com</a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
