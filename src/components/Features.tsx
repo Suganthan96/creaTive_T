@@ -274,47 +274,6 @@ const Features = () => {
               </div>
             )}
           </div>
-
-          <div className="mt-16 mb-8 feature-item">
-            <div className="text-center mb-8">
-              <div className="inline-block mb-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
-                Textile Sensor Applications
-              </div>
-              <h3 className="text-2xl font-bold">Real-World Use Cases</h3>
-              <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
-                Explore how our textile sensors are applied in different professional contexts, 
-                from emergency response to construction and athletics.
-                <span className="block text-sm mt-1 text-blue-500">Scroll horizontally to see more examples →</span>
-              </p>
-            </div>
-            
-            <div className="rounded-xl overflow-hidden bg-white p-4 feature-item">
-              <Carousel className="w-full max-w-7xl mx-auto">
-                <CarouselContent className="flex">
-                  {sensorCaseStudies.map((study, index) => <CarouselItem key={index} className="md:basis-1/3 flex-shrink-0">
-                      <Card className="border border-gray-100 shadow-md">
-                        <CardContent className="p-0">
-                          <div className="w-full h-full">
-                            <img src={study.image} alt={study.title} className="w-full h-auto object-contain" />
-                          </div>
-                          <div className="p-4">
-                            <h4 className="font-semibold text-lg">{study.title}</h4>
-                            <p className="text-sm text-gray-600 mt-2">{study.description}</p>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>)}
-                </CarouselContent>
-                <div className="flex justify-center mt-6 gap-2">
-                  <CarouselPrevious className="relative static left-auto translate-y-0 hover:bg-gray-100" />
-                  <CarouselNext className="relative static right-auto translate-y-0 hover:bg-gray-100" />
-                </div>
-              </Carousel>
-              <div className="text-center mt-6 text-sm text-gray-600">
-                <p className="font-medium">These examples showcase just a few ways our textile sensors can enhance safety and performance</p>
-              </div>
-            </div>
-          </div>
         </div>
         <div className="text-center mt-12 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button onClick={scrollToContact} className="inline-flex items-center px-4 sm:px-6 py-3 bg-gray-700 hover:bg-gray-800 text-white rounded-lg shadow-md hover:shadow-lg transition-all group w-full sm:w-auto">
