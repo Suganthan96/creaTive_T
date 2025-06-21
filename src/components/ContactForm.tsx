@@ -147,7 +147,7 @@ const ContactForm = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
-          <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 border border-gray-700 text-black w-full">
+          <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 border border-gray-700 text-black w-full min-w-[700px]">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-white p-12 rounded-xl shadow-xl border border-gray-200 text-black w-full min-w-[500px] mx-auto">
                 <FormField control={form.control} name="name" render={({ field }) => (
