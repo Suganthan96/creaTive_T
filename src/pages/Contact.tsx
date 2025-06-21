@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <PageLayout>
       <div className="min-h-[80vh] bg-gradient-to-b from-white to-black py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+        <div className="w-full px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
           {/* Left: Contact Info */}
           <div className="md:col-span-5 w-full space-y-8">
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-black">
