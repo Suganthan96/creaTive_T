@@ -7,7 +7,7 @@ const Contact = () => {
     <PageLayout>
       <div className="min-h-[80vh] bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 mt-16">
             <div className="inline-block mb-3 px-3 py-1 bg-white text-black rounded-full text-sm font-medium border border-gray-200">
               Get In Touch
             </div>
