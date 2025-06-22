@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <img 
               src="/lovable-uploads/7d120ee6-3614-4b75-9c35-716d54490d67.png" 
-              alt="WRLDS Technologies Logo" 
+              alt="Suganth Creative Logo" 
               className="h-10 w-auto mb-6 invert" // Added invert to make logo white
             />
             <p className="text-gray-300 mb-6">
