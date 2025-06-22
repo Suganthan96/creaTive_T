@@ -29,7 +29,6 @@ const Index = () => {
       <Features />
       <WhyWrlds />
       <Projects />
-      <BlogPreview />
     </PageLayout>
   );
 };
