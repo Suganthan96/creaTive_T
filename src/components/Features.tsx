@@ -427,7 +427,6 @@ const Features = () => {
                 Learn More About Our Technology
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
-              
             </div>
           </div>
         </div>
