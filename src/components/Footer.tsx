@@ -1,4 +1,4 @@
-import { ArrowRight, Linkedin } from "lucide-react";
+import { ArrowRight, Linkedin, Facebook, Twitter, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -27,6 +27,28 @@ const Footer = () => {
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 transition-colors hover:bg-gray-700 hover:text-white"
               >
                 <Linkedin size={20} />
+              </a>
+              <a 
+                href="https://www.facebook.com/your-profile" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 transition-colors hover:bg-gray-700 hover:text-white"
+              >
+                <Facebook size={20} />
+              </a>
+              <a 
+                href="https://twitter.com/your-profile" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 transition-colors hover:bg-gray-700 hover:text-white"
+              >
+                <Twitter size={20} />
+              </a>
+              <a 
+                href="mailto:your-email@gmail.com" 
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 transition-colors hover:bg-gray-700 hover:text-white"
+              >
+                <Mail size={20} />
               </a>
             </div>
           </div>
