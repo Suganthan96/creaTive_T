@@ -16,7 +16,7 @@ const Blog = () => {
   return (
     <PageLayout>
       <SEO 
-        title="WRLDS - News and insights about smart textile technology" 
+        title="Creative Suganth" 
         description="Stay updated with the latest news and insights about sensor-integrated textiles and smart technology from WRLDS Technologies."
         imageUrl={featuredPost?.imageUrl || "/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png"}
         keywords={['smart textiles', 'textile technology', 'industry news', 'sensor innovation', 'wearable tech', 'smart fabrics']}
