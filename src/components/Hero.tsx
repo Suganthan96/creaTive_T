@@ -1,4 +1,4 @@
-import { ArrowRight, Code, Cpu, Layers, MessageSquare } from "lucide-react";
+import { ArrowRight, ArrowLeft, Code, Cpu, Layers, MessageSquare } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -13,13 +13,19 @@ const heroImages = [
 const Hero = () => {
   const isMobile = useIsMobile();
   const [current, setCurrent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
+    if (isPaused) return;
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % heroImages.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isPaused]);
+
+  const goTo = (idx: number) => setCurrent(idx);
+  const goPrev = () => setCurrent((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+  const goNext = () => setCurrent((prev) => (prev + 1) % heroImages.length);
 
   const containerVariants = {
     hidden: {
@@ -73,6 +79,45 @@ const Hero = () => {
         ))}
         {/* Overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-transparent" />
+        {/* Left Arrow */}
+        <button
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-all duration-200 flex items-center justify-center"
+          onClick={goPrev}
+          aria-label="Previous slide"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onFocus={() => setIsPaused(true)}
+          onBlur={() => setIsPaused(false)}
+        >
+          <ArrowLeft className="w-7 h-7 text-gray-700" />
+        </button>
+        {/* Right Arrow */}
+        <button
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-all duration-200 flex items-center justify-center"
+          onClick={goNext}
+          aria-label="Next slide"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onFocus={() => setIsPaused(true)}
+          onBlur={() => setIsPaused(false)}
+        >
+          <ArrowRight className="w-7 h-7 text-gray-700" />
+        </button>
+        {/* Dots */}
+        <div className="absolute bottom-6 left-0 right-0 flex justify-center items-center space-x-3 z-20">
+          {heroImages.map((_, idx) => (
+            <button
+              key={idx}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${current === idx ? 'bg-gray-500 w-5' : 'bg-gray-200 hover:bg-gray-300'}`}
+              onClick={() => goTo(idx)}
+              aria-label={`Go to slide ${idx + 1}`}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              onFocus={() => setIsPaused(true)}
+              onBlur={() => setIsPaused(false)}
+            />
+          ))}
+        </div>
       </div>
       {/* Content */}
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">
