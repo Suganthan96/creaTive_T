@@ -11,6 +11,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Blog from "./pages/Blog";
 import BlogPostDetail from "./pages/BlogPostDetail";
 import Contact from "./pages/Contact";
+import Samples from "./pages/Samples";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -28,7 +29,7 @@ const App = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPostDetail />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/samples" element={<Samples />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
