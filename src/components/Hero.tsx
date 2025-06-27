@@ -1,6 +1,6 @@
 import { ArrowRight, ArrowLeft, Code, Cpu, Layers, MessageSquare } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
@@ -14,18 +14,23 @@ const Hero = () => {
   const isMobile = useIsMobile();
   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
 
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % heroImages.length);
+      slideTo(current + 1, 1);
     }, 4000);
     return () => clearInterval(interval);
-  }, [isPaused]);
+  }, [isPaused, current]);
 
-  const goTo = (idx: number) => setCurrent(idx);
-  const goPrev = () => setCurrent((prev) => (prev - 1 + heroImages.length) % heroImages.length);
-  const goNext = () => setCurrent((prev) => (prev + 1) % heroImages.length);
+  const slideTo = (idx: number, dir: number) => {
+    setDirection(dir);
+    setCurrent((idx + heroImages.length) % heroImages.length);
+  };
+  const goTo = (idx: number) => slideTo(idx, idx > current ? 1 : -1);
+  const goPrev = () => slideTo(current - 1, -1);
+  const goNext = () => slideTo(current + 1, 1);
 
   const containerVariants = {
     hidden: {
@@ -67,18 +72,22 @@ const Hero = () => {
   return <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
       {/* Sliding background images */}
       <div className="absolute inset-0 w-full h-full z-0">
-        {heroImages.map((img, idx) => (
-          <img
-            key={img}
-            src={img}
+        <AnimatePresence initial={false} custom={direction}>
+          <motion.img
+            key={heroImages[current]}
+            src={heroImages[current]}
             alt="Hero background"
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${current === idx ? 'opacity-100' : 'opacity-0'}`}
-            style={{ transitionProperty: 'opacity' }}
+            className="absolute inset-0 w-full h-full object-cover"
             draggable={false}
+            initial={{ x: direction === 1 ? '100%' : '-100%', opacity: 1 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: direction === 1 ? '-100%' : '100%', opacity: 1 }}
+            transition={{ x: { type: 'spring', stiffness: 400, damping: 40 }, opacity: { duration: 0.2 } }}
+            style={{ zIndex: 1 }}
           />
-        ))}
+        </AnimatePresence>
         {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-transparent z-10" />
         {/* Left Arrow */}
         <button
           className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-all duration-200 flex items-center justify-center"
