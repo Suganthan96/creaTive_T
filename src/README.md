@@ -43,4 +43,3 @@ This directory contains the main source code for the Suganth Creative React web 
 
 ---
 
-For more details, see comments in individual files or ask for specific implementation notes! 
