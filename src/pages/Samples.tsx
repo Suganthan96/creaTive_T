@@ -48,7 +48,6 @@ export default function Samples() {
         }
       `}</style>
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#232323] py-16">
-        <h1 className="text-3xl font-bold text-white mb-10">Samples</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {images.map((img, i) => (
             <div
